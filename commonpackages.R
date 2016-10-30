@@ -32,3 +32,9 @@ install.packages(c(
                    "lsmeans"
                    ))
 
+# How to load multiple packages at once without retyping the require command over and over: 
+#assign packages to an object 
+multiple_packages=c("dplyr", "tidyr", "ggplot2")
+#use the lapply function to load all packages at once, important to write character.only=TRUE
+lapply(multiple_packages, require, character.only=TRUE)
+
